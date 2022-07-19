@@ -1,0 +1,105 @@
+/* Global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(to right, #cc2b5e, #753a88);
+  color: white;
+}
+ul {
+  list-style: none;
+}
+.App {
+  // nav bar
+  nav {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+      width: 96px;
+      height: 96px;
+      background-image: url("../Images/icons8-calculator-cute-color-96.png");
+      background-size: contain;
+    }
+    .themes {
+      display: flex;
+      align-items: center;
+      width: 40%;
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        li {
+          display: inline-block;
+          flex-basis: 1;
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .calculator {
+    padding: 20px;
+    width: 50%;
+    margin: auto;
+    .display {
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.366);
+      width: 100%;
+      min-height: 100px;
+      p {
+        font-size: 35px;
+        width: 100%;
+        text-align: right;
+      }
+      p:nth-child(1) {
+        color: red;
+      }
+    }
+    .calc-btns {
+      display: grid;
+      height: 50vh;
+      grid-template-columns: repeat(4, 1fr);
+      button {
+        border-radius: 0;
+        border: solid 2px #6d0353;
+        font-size: 30px;
+      }
+      .span-2 {
+        grid-column: span 2;
+      }
+    }
+  }
+  @media screen and (max-width: 762px) {
+    .calculator {
+      width: 100%;
+    }
+  }
+  footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    span {
+      margin: 0 20px 0 20px;
+      font-style: italic;
+      font-size: 12px;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+  }
+}
